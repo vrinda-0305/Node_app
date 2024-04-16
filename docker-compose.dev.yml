@@ -1,0 +1,19 @@
+version: '3'
+services:
+  nginx:
+    ports:
+      - "3000:80"
+  #image name because it is built first
+  node-app:
+   build:         
+      context: .
+      args:
+        - NODE_ENV=development
+   volumes:
+     - ./:/app:ro #sync for volumes
+     - /app/node_modules #anonymous volumes
+   environment:
+     - NODE_ENV= development
+     - MONGO_USER=root
+     - MONGO_PASSWORD=root
+   command: npm run dev  
