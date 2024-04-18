@@ -6,6 +6,8 @@ const postRouter = require("./routes/postRoutes");
 
 const Mongourl = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`
 
+console.log("Mongo URL :",Mongourl);
+
 mongoose.connect(
     //"mongodb://root:root@172.28.0.2:27017/?authSource=admin")
     Mongourl)
