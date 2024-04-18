@@ -13,7 +13,7 @@ services:
      - ./:/app:ro #sync for volumes
      - /app/node_modules #anonymous volumes
    environment:
-     - NODE_ENV= development
+     - NODE_ENV=development
      - MONGO_USER=root
      - MONGO_PASSWORD=root
    command: npm run dev  

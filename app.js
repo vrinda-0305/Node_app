@@ -20,7 +20,7 @@ mongoose.connect(
 app.get("/",(req,res) => {res.send("<h1>Hello world from Node<h1>");
 });
 
-
+app.enable("trust proxy");
 
 const PORT=process.env.PORT || 3000;
 
